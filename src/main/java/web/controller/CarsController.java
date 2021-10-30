@@ -16,6 +16,11 @@ public class CarsController {
     @Autowired
     CarService carService;
 
+    @GetMapping(value = "/")
+    public String start() {
+        return "redirect:cars";
+    }
+
     @GetMapping(value = "cars")
     public String printWelcome(@RequestParam(value = "count", required = false) String count, ModelMap model) {
         List<Car> cars = Car.getListCar();
