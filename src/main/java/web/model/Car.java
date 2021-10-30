@@ -11,7 +11,7 @@ public class Car {
     private int hp;
     private String color;
 
-    Car(){}
+    public Car(){}
 
     public Car(String model, int hp, String color) {
         this.model = model;
@@ -43,7 +43,7 @@ public class Car {
         this.color = color;
     }
 
-    public List<Car> getListCar(){
+    public static List<Car> getListCar(){
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("Vaz",80,"white"));
         cars.add(new Car("Vaz",90,"silver"));
